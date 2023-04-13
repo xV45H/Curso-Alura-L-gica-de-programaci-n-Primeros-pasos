@@ -107,10 +107,7 @@ JavaScript
 	document.write ("<br>");
 
 
-
 </script>
-
-
 
 <script>
 
@@ -126,4 +123,87 @@ JavaScript
     document.write(tablaDeMultiplicar + " veces 8 es " + tablaDeMultiplicar* 8 + "<br>");
     document.write(tablaDeMultiplicar + " veces 9 es " + tablaDeMultiplicar* 9 + "<br>");
     document.write(tablaDeMultiplicar + " veces 10 es " + tablaDeMultiplicar* 10 + "<br>");
+    document.write("<br>");
+    document.write("<br>");
 </script>
+
+
+<script>
+
+	function saltarLinea() {
+
+		// funcion a realizar 
+
+		document.write ("<br>");
+
+	}
+	var saltoDeLinea = "<br>";
+
+	document.write("Texto de referencia para el uso de funciones y de variables");
+
+	document.write(saltoDeLinea);
+
+	document.write("Este texto se salto por una variable");
+
+	saltarLinea();
+
+	document.write("Este texto se salto por una función");
+
+	saltarLinea();
+	saltarLinea();
+	saltarLinea();
+</script>
+
+<script>
+
+	function saltarLinea() {
+		// este codigo hace un dobe salto de linea 
+		document.write ("<br>");
+		document.write ("<br>");
+	}
+
+	function imprimir (frase){
+		// este codigo es para suplantar una funcion 
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var anios = 2023;
+
+	imprimir("Hola mundo")
+	
+
+	imprimir("Juan tiene: "+ (anios-2000)+" años");
+	
+
+	imprimir("Pedro tiene: "+ (anios-1995)+" años");
+	
+
+	imprimir("Carlos tiene: "+ (anios-2005)+" años");
+	
+
+</script>
+
+
+
+<script>
+	function saltarLinea() {
+		// este codigo hace un dobe salto de linea 
+		document.write ("<br>");
+		document.write ("<br>");
+	}
+
+	function imprimir (frase){
+		// este codigo es para suplantar una funcion 
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var edad1 = 24;
+	var edad2 = 32;
+	var diferenciaDeEdades = edad1 - edad2;
+
+	imprimir("Nuestra diferencia de edades entre yo y mi amigo es de " + diferenciaDeEdades);
+</script>
+
+
