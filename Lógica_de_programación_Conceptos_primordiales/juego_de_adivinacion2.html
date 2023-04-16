@@ -1,0 +1,62 @@
+<meta charset="utf-8"> 
+
+<h1>PROGRAMA JUEGO DE ADIVINACIÓN </h1>
+
+<script>
+	
+	function saltarLinea(){
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	
+	}
+
+	function imprimir (frase){
+
+		document.write(frase );
+		saltarLinea();
+
+	}
+
+	alert ("Trata de adivinar el numero pensado por la maquina")
+
+	var numSistema = Math.round (Math.random()*10);
+	var intentos = 3;
+	var contador = 1;
+
+	while(contador <= intentos){
+
+		var numLanzado = parseInt (prompt("Ingrese un numero entre el numero 0 al 10"));
+
+		if (numSistema == numLanzado) {
+
+		alert("Usted acerto, en el intento " + contador + " el numero pensado era " + numSistema);
+		break;
+
+		}
+
+		else {
+
+		alert("Usted no acerto");
+		}
+
+		contador++;
+	}
+
+	if (numSistema == numLanzado) {
+
+		imprimir("Uste acerto, en el intento " + contador + " el numero del sistema era " + numSistema);
+
+	}
+
+	else{
+
+		imprimir("Usted no acerto, el numero del sistema era "+ numSistema);
+	}
+
+	imprimir("Fin")
+
+
+
+</script>
