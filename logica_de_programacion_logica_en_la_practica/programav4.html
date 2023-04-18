@@ -1,0 +1,40 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400); 
+
+    var colores = ["red", "white", "yello", "black"]; // se agrega un array de colores
+    var indiceColorActual = 0;  //se pone en cero para poder iniciar desde la casilla 1 del array
+
+    function dibujarCirculo(evento){
+
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;  
+
+        pincel.fillStyle = colores[indiceColorActual];
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
+
+    pantalla.onclick = dibujarCirculo;
+
+    //se creaa una funcion en la cual haga el cambio de color al dar clic derecho 
+    function alterarColor() {
+        indiceColorActual++; //se aumenta mas 1 en el array para intercambiar de colores
+        //se crea un if para cuando el color actual es mas grande o igual que el array, se reincie el array 
+        if(indiceColorActual>= colores.length) {
+             indiceColorActual = 0; 
+        }
+
+        return false; //menu contextual padron de canva no sea exibido, osease que no salga el menu al dar clic derecho.
+    }
+
+    pantalla.oncontextmenu = alterarColor; //oncotextmenu es para registrar el clic derecho 
+
+</script> 
